@@ -37,6 +37,9 @@ public class SortExperiments {
 
     public static void main(String[] args) {
         SortExperiments app = new SortExperiments();
+        app.sort1();
         app.sort2();
+        app.sort3();
+        app.sort4();
     }
 }

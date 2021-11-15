@@ -1,20 +1,21 @@
-public class QuickSortString {
-    public static void sort(String[] array) {
+public class QuickSortPerson {
+
+    public static void sort(Person[] array) {
         quicksort(array, 0, array.length - 1);
     }
 
-    private static void quicksort(String[] a, int p, int r) {
+    private static void quicksort(Person[] a, int p, int r) {
         if (p < r) {
             int i = p - 1;
             for (int j = p; j < r; j++) {
-                if (a[j].compareTo(a[r]) <= 0) {
+                if (a[j].compareTo (a[r]) <= 0) {
                     i++;
-                    String b = a[i];
+                    Person b = a[i];
                     a[i] = a[j];
                     a[j] = b;
                 }
             }
-            String b = a[i + 1];
+            Person b = a[i + 1];
             a[i + 1] = a[r];
             a[r] = b;
 
@@ -22,5 +23,5 @@ public class QuickSortString {
             quicksort(a, i + 2, r);
         }
     }
-
 }
+
